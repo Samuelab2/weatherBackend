@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback(body.error.info, undefined)
     } else {
-      callback(undefined, `${body.current.weather_descriptions[0]}: with a current tempeture of ${body.current.temperature}C`)
+      callback(undefined, `${body.current.weather_descriptions[0]}: with a current tempeture of ${body.current.temperature}C. The wind speed is about ${body.current.wind_speed} mts, and humidity of ${body.current.humidity}%.`)
     }
   })
 }
